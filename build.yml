@@ -1,0 +1,22 @@
+name: PIPELINE OF TESTS
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request_target:
+    types: [opened, edited, closed]
+    branches: [main]
+
+jobs:
+  test-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    strategy:
+      matrix:
+        node-version: [14.x]
+        architecture: [x64]
+    steps:
+      - name: Install packages
+        run: sudo apt-get -qy install libsqlite3-dev
