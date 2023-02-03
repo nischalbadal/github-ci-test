@@ -1,0 +1,41 @@
+# Application cache
+*__pycache__
+.cache
+.pytest_cache/
+
+# To be ignored files
+*__ignore
+
+# Dist
+dist
+
+# Log
+logs
+
+# environment file
+*.env
+*.env.*
+!.env.example
+.python-version
+connections.*.json
+
+# Vscode stuffs
+.vscode/
+.history/
+
+# jetbrains
+.idea/
+
+# Flask stuffs
+instance/
+.webassets-cache
+
+# Packages
+*.egg
+*.egg-info
+build/
+
+# databases
+*.sqlite3
+/db/*.sqlite3
+*.db
